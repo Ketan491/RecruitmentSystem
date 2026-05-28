@@ -1,0 +1,38 @@
+# ── Web framework ─────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# ── Database ──────────────────────────────────────────────────────────
+motor==3.4.0
+pymongo==4.7.2
+
+# ── Auth / Security ───────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+# passlib 1.7.4 + bcrypt ≥ 4.0 crashes on Python 3.11 with AttributeError: __about__
+# Pin bcrypt to 4.0.1 which is the last version passlib 1.7.4 works with
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# ── HTTP / Forms ──────────────────────────────────────────────────────
+python-multipart==0.0.9
+
+# ── Validation ────────────────────────────────────────────────────────
+pydantic[email]==2.7.1
+pydantic-settings==2.3.0
+python-dotenv==1.0.1
+
+# ── AI / NLP ──────────────────────────────────────────────────────────
+spacy==3.7.4
+nltk==3.8.1
+# PyPDF2 is deprecated and unmaintained — replaced by pypdf (same API, maintained fork)
+pypdf==4.2.0
+scikit-learn==1.5.0
+# numpy 2.x has breaking changes; 1.26.4 is the stable Python 3.11 release
+numpy==1.26.4
+
+# ── File handling ─────────────────────────────────────────────────────
+aiofiles==23.2.1
+Pillow==10.3.0
+
+# ── HTTP client (for testing) ─────────────────────────────────────────
+httpx==0.27.0
